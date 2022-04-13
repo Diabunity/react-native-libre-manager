@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F4FF95D7245B92E800C19C63 /* Rnlibretoolsios13.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FF95D6245B92E800C19C63 /* Rnlibretoolsios13.swift */; };
+		FA1C8E9D280780DA00003462 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1C8E9A280780DA00003462 /* Package.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,7 +28,9 @@
 		B3E7B5891CC2AC0600A0062D /* Rnlibretoolsios13.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Rnlibretoolsios13.m; sourceTree = "<group>"; };
 		F4FF95D5245B92E700C19C63 /* Rnlibretoolsios13-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Rnlibretoolsios13-Bridging-Header.h"; sourceTree = "<group>"; };
 		F4FF95D6245B92E800C19C63 /* Rnlibretoolsios13.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rnlibretoolsios13.swift; sourceTree = "<group>"; };
-		FA1C8E9528077D4500003462 /* RNLibreToolsiOS13 */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = RNLibreToolsiOS13; path = ../../ios/RNLibreToolsiOS13; sourceTree = "<group>"; };
+		FA1C8E9A280780DA00003462 /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		FA1C8E9B280780DA00003462 /* Tests */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Tests; sourceTree = "<group>"; };
+		FA1C8E9C280780DA00003462 /* Sources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sources; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +55,9 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
-				FA1C8E9528077D4500003462 /* RNLibreToolsiOS13 */,
+				FA1C8E9A280780DA00003462 /* Package.swift */,
+				FA1C8E9C280780DA00003462 /* Sources */,
+				FA1C8E9B280780DA00003462 /* Tests */,
 				F4FF95D6245B92E800C19C63 /* Rnlibretoolsios13.swift */,
 				B3E7B5891CC2AC0600A0062D /* Rnlibretoolsios13.m */,
 				F4FF95D5245B92E700C19C63 /* Rnlibretoolsios13-Bridging-Header.h */,
@@ -117,6 +122,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA1C8E9D280780DA00003462 /* Package.swift in Sources */,
 				F4FF95D7245B92E800C19C63 /* Rnlibretoolsios13.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
