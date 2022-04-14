@@ -4,7 +4,7 @@
   "description": "libre tool",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
-  "types": "lib/typescript/index.ts",
+  "types": "lib/typescript/types.d.ts",
   "react-native": "src/index",
   "source": "src/index",
   "files": [
