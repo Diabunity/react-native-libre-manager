@@ -7,8 +7,6 @@
 
 import Foundation
 
-import RNLibreToolsiOS13
-
 @objc(LibreManagerModule)
 class LibreManagerModule: NSObject {
   @objc static func requiresMainQueueSetup() -> Bool {
