@@ -4,7 +4,7 @@
   "description": "libre tool",
   "main": "src/index",
   "module": "src/index",
-  "types": "src/types.d.ts",
+  "types": "src/index.ts",
   "react-native": "src/index",
   "source": "src/index",
   "files": [
