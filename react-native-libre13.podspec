@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
   s.platforms    = { :ios => "15.0" }
   s.source       = { :git => "https://github.com/interhub/react-native-libre13.git", :tag => "#{s.version}" }
 
-  s.source_files = "ios"
+  s.source_files = "ios/*"
 
   s.dependency "React-Core"
 end
