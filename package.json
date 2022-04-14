@@ -2,9 +2,9 @@
   "name": "react-native-libre13",
   "version": "0.1.0",
   "description": "libre tool",
-  "main": "lib/commonjs/index",
-  "module": "lib/module/index",
-  "types": "lib/typescript/types.d.ts",
+  "main": "src/index",
+  "module": "src/index",
+  "types": "src/types.d.ts",
   "react-native": "src/index",
   "source": "src/index",
   "files": [
