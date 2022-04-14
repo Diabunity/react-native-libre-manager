@@ -7,7 +7,7 @@
 
 import Foundation
 
-import RNLibreToolsiOS13
+// import RNLibreToolsiOS13
 
 @objc(LibreManagerModule)
 class LibreManagerModule: NSObject {
