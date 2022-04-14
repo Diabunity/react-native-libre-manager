@@ -8,10 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		F4FF95D7245B92E800C19C63 /* Rnlibretoolsios15.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FF95D6245B92E800C19C63 /* Rnlibretoolsios15.swift */; };
-		FA6AF33C28088D7600434D31 /* NFCSensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6AF32128088D7500434D31 /* NFCSensor.swift */; };
-		FA6AF33D28088D7600434D31 /* RNLibreToolsiOS13.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6AF32A28088D7600434D31 /* RNLibreToolsiOS13.swift */; };
-		FA6AF33E28088D7600434D31 /* LibreError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6AF33B28088D7600434D31 /* LibreError.swift */; };
-		FA6AF33F28088D7600434D31 /* RNLibreToolsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6AF33A28088D7600434D31 /* RNLibreToolsProtocol.swift */; };
+		FA6AF35D28088FE300434D31 /* RNLibreToolsiOS13.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6AF34228088FE200434D31 /* RNLibreToolsiOS13.swift */; };
+		FA6AF35E28088FE300434D31 /* Sensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6AF34428088FE200434D31 /* Sensor.swift */; };
+		FA6AF35F28088FE300434D31 /* Libre2US.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6AF34528088FE200434D31 /* Libre2US.swift */; };
+		FA6AF36028088FE300434D31 /* LibreToolbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6AF34628088FE200434D31 /* LibreToolbox.swift */; };
+		FA6AF36128088FE300434D31 /* LibrePro.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6AF34728088FE200434D31 /* LibrePro.swift */; };
+		FA6AF36228088FE300434D31 /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6AF34828088FE200434D31 /* extensions.swift */; };
+		FA6AF36328088FE300434D31 /* SecurityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6AF34928088FE200434D31 /* SecurityManager.swift */; };
+		FA6AF36428088FE300434D31 /* Libre14US.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6AF34A28088FE200434D31 /* Libre14US.swift */; };
+		FA6AF36528088FE300434D31 /* OOP.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6AF34B28088FE200434D31 /* OOP.swift */; };
+		FA6AF36628088FE300434D31 /* AbstractLibre2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6AF34C28088FE200434D31 /* AbstractLibre2.swift */; };
+		FA6AF36728088FE300434D31 /* Libre1.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6AF34D28088FE200434D31 /* Libre1.swift */; };
+		FA6AF36828088FE300434D31 /* Libre3.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6AF34E28088FE200434D31 /* Libre3.swift */; };
+		FA6AF36928088FE300434D31 /* AbstractLibre.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6AF34F28088FE200434D31 /* AbstractLibre.swift */; };
+		FA6AF36A28088FE300434D31 /* Glucose.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6AF35028088FE200434D31 /* Glucose.swift */; };
+		FA6AF36B28088FE300434D31 /* Libre2CA.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6AF35128088FE200434D31 /* Libre2CA.swift */; };
+		FA6AF36C28088FE300434D31 /* LibreError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6AF35228088FE200434D31 /* LibreError.swift */; };
+		FA6AF36D28088FE300434D31 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6AF35528088FE200434D31 /* Logger.swift */; };
+		FA6AF36E28088FE300434D31 /* NFCSensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6AF35628088FE300434D31 /* NFCSensor.swift */; };
+		FA6AF36F28088FE300434D31 /* RNLibreToolsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6AF35728088FE300434D31 /* RNLibreToolsProtocol.swift */; };
+		FA6AF37028088FE300434D31 /* NFCActivateOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6AF35928088FE300434D31 /* NFCActivateOperation.swift */; };
+		FA6AF37128088FE300434D31 /* NFCReadFramOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6AF35A28088FE300434D31 /* NFCReadFramOperation.swift */; };
+		FA6AF37228088FE300434D31 /* NFCStartSessionOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6AF35B28088FE300434D31 /* NFCStartSessionOperation.swift */; };
+		FA6AF37328088FE300434D31 /* NFCAbstractOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6AF35C28088FE300434D31 /* NFCAbstractOperation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,29 +50,29 @@
 		B3E7B5891CC2AC0600A0062D /* Rnlibretoolsios15.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Rnlibretoolsios15.m; sourceTree = "<group>"; };
 		F4FF95D5245B92E700C19C63 /* Rnlibretoolsios15-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Rnlibretoolsios15-Bridging-Header.h"; sourceTree = "<group>"; };
 		F4FF95D6245B92E800C19C63 /* Rnlibretoolsios15.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rnlibretoolsios15.swift; sourceTree = "<group>"; };
-		FA6AF32128088D7500434D31 /* NFCSensor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCSensor.swift; sourceTree = "<group>"; };
-		FA6AF32428088D7600434D31 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
-		FA6AF32628088D7600434D31 /* NFCActivateOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCActivateOperation.swift; sourceTree = "<group>"; };
-		FA6AF32728088D7600434D31 /* NFCReadFramOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCReadFramOperation.swift; sourceTree = "<group>"; };
-		FA6AF32828088D7600434D31 /* NFCStartSessionOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCStartSessionOperation.swift; sourceTree = "<group>"; };
-		FA6AF32928088D7600434D31 /* NFCAbstractOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCAbstractOperation.swift; sourceTree = "<group>"; };
-		FA6AF32A28088D7600434D31 /* RNLibreToolsiOS13.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RNLibreToolsiOS13.swift; path = RNLibreToolsiOS13/RNLibreToolsiOS13.swift; sourceTree = "<group>"; };
-		FA6AF32C28088D7600434D31 /* Sensor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sensor.swift; sourceTree = "<group>"; };
-		FA6AF32D28088D7600434D31 /* Libre2US.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Libre2US.swift; sourceTree = "<group>"; };
-		FA6AF32E28088D7600434D31 /* LibreToolbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibreToolbox.swift; sourceTree = "<group>"; };
-		FA6AF32F28088D7600434D31 /* LibrePro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibrePro.swift; sourceTree = "<group>"; };
-		FA6AF33028088D7600434D31 /* extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
-		FA6AF33128088D7600434D31 /* SecurityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityManager.swift; sourceTree = "<group>"; };
-		FA6AF33228088D7600434D31 /* Libre14US.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Libre14US.swift; sourceTree = "<group>"; };
-		FA6AF33328088D7600434D31 /* OOP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OOP.swift; sourceTree = "<group>"; };
-		FA6AF33428088D7600434D31 /* AbstractLibre2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractLibre2.swift; sourceTree = "<group>"; };
-		FA6AF33528088D7600434D31 /* Libre1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Libre1.swift; sourceTree = "<group>"; };
-		FA6AF33628088D7600434D31 /* Libre3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Libre3.swift; sourceTree = "<group>"; };
-		FA6AF33728088D7600434D31 /* AbstractLibre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractLibre.swift; sourceTree = "<group>"; };
-		FA6AF33828088D7600434D31 /* Glucose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Glucose.swift; sourceTree = "<group>"; };
-		FA6AF33928088D7600434D31 /* Libre2CA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Libre2CA.swift; sourceTree = "<group>"; };
-		FA6AF33A28088D7600434D31 /* RNLibreToolsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNLibreToolsProtocol.swift; sourceTree = "<group>"; };
-		FA6AF33B28088D7600434D31 /* LibreError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibreError.swift; sourceTree = "<group>"; };
+		FA6AF34228088FE200434D31 /* RNLibreToolsiOS13.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNLibreToolsiOS13.swift; sourceTree = "<group>"; };
+		FA6AF34428088FE200434D31 /* Sensor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sensor.swift; sourceTree = "<group>"; };
+		FA6AF34528088FE200434D31 /* Libre2US.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Libre2US.swift; sourceTree = "<group>"; };
+		FA6AF34628088FE200434D31 /* LibreToolbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibreToolbox.swift; sourceTree = "<group>"; };
+		FA6AF34728088FE200434D31 /* LibrePro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibrePro.swift; sourceTree = "<group>"; };
+		FA6AF34828088FE200434D31 /* extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
+		FA6AF34928088FE200434D31 /* SecurityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecurityManager.swift; sourceTree = "<group>"; };
+		FA6AF34A28088FE200434D31 /* Libre14US.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Libre14US.swift; sourceTree = "<group>"; };
+		FA6AF34B28088FE200434D31 /* OOP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OOP.swift; sourceTree = "<group>"; };
+		FA6AF34C28088FE200434D31 /* AbstractLibre2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbstractLibre2.swift; sourceTree = "<group>"; };
+		FA6AF34D28088FE200434D31 /* Libre1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Libre1.swift; sourceTree = "<group>"; };
+		FA6AF34E28088FE200434D31 /* Libre3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Libre3.swift; sourceTree = "<group>"; };
+		FA6AF34F28088FE200434D31 /* AbstractLibre.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbstractLibre.swift; sourceTree = "<group>"; };
+		FA6AF35028088FE200434D31 /* Glucose.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Glucose.swift; sourceTree = "<group>"; };
+		FA6AF35128088FE200434D31 /* Libre2CA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Libre2CA.swift; sourceTree = "<group>"; };
+		FA6AF35228088FE200434D31 /* LibreError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibreError.swift; sourceTree = "<group>"; };
+		FA6AF35528088FE200434D31 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		FA6AF35628088FE300434D31 /* NFCSensor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFCSensor.swift; sourceTree = "<group>"; };
+		FA6AF35728088FE300434D31 /* RNLibreToolsProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNLibreToolsProtocol.swift; sourceTree = "<group>"; };
+		FA6AF35928088FE300434D31 /* NFCActivateOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFCActivateOperation.swift; sourceTree = "<group>"; };
+		FA6AF35A28088FE300434D31 /* NFCReadFramOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFCReadFramOperation.swift; sourceTree = "<group>"; };
+		FA6AF35B28088FE300434D31 /* NFCStartSessionOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFCStartSessionOperation.swift; sourceTree = "<group>"; };
+		FA6AF35C28088FE300434D31 /* NFCAbstractOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFCAbstractOperation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,13 +97,13 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
-				FA6AF32228088D7600434D31 /* Foundation */,
-				FA6AF33B28088D7600434D31 /* LibreError.swift */,
-				FA6AF32B28088D7600434D31 /* LibreToolsResources */,
-				FA6AF32528088D7600434D31 /* NFCOperations */,
-				FA6AF32128088D7500434D31 /* NFCSensor.swift */,
-				FA6AF32A28088D7600434D31 /* RNLibreToolsiOS13.swift */,
-				FA6AF33A28088D7600434D31 /* RNLibreToolsProtocol.swift */,
+				FA6AF35328088FE200434D31 /* Foundation */,
+				FA6AF35228088FE200434D31 /* LibreError.swift */,
+				FA6AF34328088FE200434D31 /* LibreToolsResources */,
+				FA6AF35828088FE300434D31 /* NFCOperations */,
+				FA6AF35628088FE300434D31 /* NFCSensor.swift */,
+				FA6AF34228088FE200434D31 /* RNLibreToolsiOS13.swift */,
+				FA6AF35728088FE300434D31 /* RNLibreToolsProtocol.swift */,
 				F4FF95D6245B92E800C19C63 /* Rnlibretoolsios15.swift */,
 				B3E7B5891CC2AC0600A0062D /* Rnlibretoolsios15.m */,
 				F4FF95D5245B92E700C19C63 /* Rnlibretoolsios15-Bridging-Header.h */,
@@ -92,52 +111,52 @@
 			);
 			sourceTree = "<group>";
 		};
-		FA6AF32228088D7600434D31 /* Foundation */ = {
+		FA6AF34328088FE200434D31 /* LibreToolsResources */ = {
 			isa = PBXGroup;
 			children = (
-				FA6AF32328088D7600434D31 /* Logger */,
+				FA6AF34428088FE200434D31 /* Sensor.swift */,
+				FA6AF34528088FE200434D31 /* Libre2US.swift */,
+				FA6AF34628088FE200434D31 /* LibreToolbox.swift */,
+				FA6AF34728088FE200434D31 /* LibrePro.swift */,
+				FA6AF34828088FE200434D31 /* extensions.swift */,
+				FA6AF34928088FE200434D31 /* SecurityManager.swift */,
+				FA6AF34A28088FE200434D31 /* Libre14US.swift */,
+				FA6AF34B28088FE200434D31 /* OOP.swift */,
+				FA6AF34C28088FE200434D31 /* AbstractLibre2.swift */,
+				FA6AF34D28088FE200434D31 /* Libre1.swift */,
+				FA6AF34E28088FE200434D31 /* Libre3.swift */,
+				FA6AF34F28088FE200434D31 /* AbstractLibre.swift */,
+				FA6AF35028088FE200434D31 /* Glucose.swift */,
+				FA6AF35128088FE200434D31 /* Libre2CA.swift */,
+			);
+			path = LibreToolsResources;
+			sourceTree = "<group>";
+		};
+		FA6AF35328088FE200434D31 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				FA6AF35428088FE200434D31 /* Logger */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
 		};
-		FA6AF32328088D7600434D31 /* Logger */ = {
+		FA6AF35428088FE200434D31 /* Logger */ = {
 			isa = PBXGroup;
 			children = (
-				FA6AF32428088D7600434D31 /* Logger.swift */,
+				FA6AF35528088FE200434D31 /* Logger.swift */,
 			);
 			path = Logger;
 			sourceTree = "<group>";
 		};
-		FA6AF32528088D7600434D31 /* NFCOperations */ = {
+		FA6AF35828088FE300434D31 /* NFCOperations */ = {
 			isa = PBXGroup;
 			children = (
-				FA6AF32628088D7600434D31 /* NFCActivateOperation.swift */,
-				FA6AF32728088D7600434D31 /* NFCReadFramOperation.swift */,
-				FA6AF32828088D7600434D31 /* NFCStartSessionOperation.swift */,
-				FA6AF32928088D7600434D31 /* NFCAbstractOperation.swift */,
+				FA6AF35928088FE300434D31 /* NFCActivateOperation.swift */,
+				FA6AF35A28088FE300434D31 /* NFCReadFramOperation.swift */,
+				FA6AF35B28088FE300434D31 /* NFCStartSessionOperation.swift */,
+				FA6AF35C28088FE300434D31 /* NFCAbstractOperation.swift */,
 			);
 			path = NFCOperations;
-			sourceTree = "<group>";
-		};
-		FA6AF32B28088D7600434D31 /* LibreToolsResources */ = {
-			isa = PBXGroup;
-			children = (
-				FA6AF32C28088D7600434D31 /* Sensor.swift */,
-				FA6AF32D28088D7600434D31 /* Libre2US.swift */,
-				FA6AF32E28088D7600434D31 /* LibreToolbox.swift */,
-				FA6AF32F28088D7600434D31 /* LibrePro.swift */,
-				FA6AF33028088D7600434D31 /* extensions.swift */,
-				FA6AF33128088D7600434D31 /* SecurityManager.swift */,
-				FA6AF33228088D7600434D31 /* Libre14US.swift */,
-				FA6AF33328088D7600434D31 /* OOP.swift */,
-				FA6AF33428088D7600434D31 /* AbstractLibre2.swift */,
-				FA6AF33528088D7600434D31 /* Libre1.swift */,
-				FA6AF33628088D7600434D31 /* Libre3.swift */,
-				FA6AF33728088D7600434D31 /* AbstractLibre.swift */,
-				FA6AF33828088D7600434D31 /* Glucose.swift */,
-				FA6AF33928088D7600434D31 /* Libre2CA.swift */,
-			);
-			path = LibreToolsResources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,11 +220,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA6AF36C28088FE300434D31 /* LibreError.swift in Sources */,
+				FA6AF37128088FE300434D31 /* NFCReadFramOperation.swift in Sources */,
+				FA6AF35D28088FE300434D31 /* RNLibreToolsiOS13.swift in Sources */,
+				FA6AF36628088FE300434D31 /* AbstractLibre2.swift in Sources */,
+				FA6AF35F28088FE300434D31 /* Libre2US.swift in Sources */,
+				FA6AF36A28088FE300434D31 /* Glucose.swift in Sources */,
+				FA6AF36E28088FE300434D31 /* NFCSensor.swift in Sources */,
+				FA6AF37228088FE300434D31 /* NFCStartSessionOperation.swift in Sources */,
+				FA6AF36F28088FE300434D31 /* RNLibreToolsProtocol.swift in Sources */,
+				FA6AF37328088FE300434D31 /* NFCAbstractOperation.swift in Sources */,
+				FA6AF36828088FE300434D31 /* Libre3.swift in Sources */,
+				FA6AF35E28088FE300434D31 /* Sensor.swift in Sources */,
+				FA6AF36328088FE300434D31 /* SecurityManager.swift in Sources */,
+				FA6AF36528088FE300434D31 /* OOP.swift in Sources */,
+				FA6AF36228088FE300434D31 /* extensions.swift in Sources */,
+				FA6AF36028088FE300434D31 /* LibreToolbox.swift in Sources */,
+				FA6AF36128088FE300434D31 /* LibrePro.swift in Sources */,
+				FA6AF36928088FE300434D31 /* AbstractLibre.swift in Sources */,
+				FA6AF36D28088FE300434D31 /* Logger.swift in Sources */,
+				FA6AF36428088FE300434D31 /* Libre14US.swift in Sources */,
+				FA6AF37028088FE300434D31 /* NFCActivateOperation.swift in Sources */,
+				FA6AF36B28088FE300434D31 /* Libre2CA.swift in Sources */,
+				FA6AF36728088FE300434D31 /* Libre1.swift in Sources */,
 				F4FF95D7245B92E800C19C63 /* Rnlibretoolsios15.swift in Sources */,
-				FA6AF33F28088D7600434D31 /* RNLibreToolsProtocol.swift in Sources */,
-				FA6AF33D28088D7600434D31 /* RNLibreToolsiOS13.swift in Sources */,
-				FA6AF33C28088D7600434D31 /* NFCSensor.swift in Sources */,
-				FA6AF33E28088D7600434D31 /* LibreError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
