@@ -20,7 +20,7 @@
     "!**/__fixtures__"
   ],
   "scripts": {
-    "save": "git add libre13 ; git commit -m \"autocommit\" ; git push origin master"
+    "save": "git add . ; git commit -m \"autocommit\" ; git push origin master"
   },
   "keywords": [
     "react-native",
