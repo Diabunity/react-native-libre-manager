@@ -20,7 +20,8 @@
     "!**/__fixtures__"
   ],
   "scripts": {
-    "save": "git add . ; git commit -m \"autocommit\" ; git push origin master"
+    "save": "git add . ; git commit -m \"autocommit\" ; git push origin master",
+    "publish:npm": "npm publish --access=public && yarn push"
   },
   "keywords": [
     "react-native",
