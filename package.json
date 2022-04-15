@@ -1,6 +1,6 @@
 {
   "name": "react-native-libre-manager",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "React native library to work with abbot freestyle libre sensors by NFC",
   "main": "src/index",
   "module": "src/index",
@@ -32,13 +32,13 @@
   "author": "David Cholariia <4daveid@gmail.com> (https://github.com/ddtch)",
   "contributors": [
     {
-      "name" : "Stepan Turchenko",
-      "email" : "stepanstepan4@gmail.com",
-      "url" : "https://github.com/interhub"
+      "name": "Stepan Turchenko",
+      "email": "stepanstepan4@gmail.com",
+      "url": "https://github.com/interhub"
     },
     {
-      "name" : "Lasha Maruashvili",
-      "url" : "https://github.com/maruashvililasha"
+      "name": "Lasha Maruashvili",
+      "url": "https://github.com/maruashvililasha"
     },
     {
       "name": "Yury Dymov",
