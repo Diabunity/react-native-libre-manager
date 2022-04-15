@@ -6,8 +6,9 @@
 //
 
 import Foundation
-
-// import RNLibreToolsiOS13
+#if !targetEnvironment(simulator)
+import RNLibreToolsiOS13
+#endif
 
 @objc(LibreManagerModule)
 class LibreManagerModule: NSObject {
