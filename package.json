@@ -1,6 +1,6 @@
 {
   "name": "react-native-libre-manager",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React native library to work with abbot freestyle libre sensors by NFC",
   "main": "src/index",
   "module": "src/index",
