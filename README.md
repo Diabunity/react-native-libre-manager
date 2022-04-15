@@ -36,17 +36,17 @@ const getGlucoseData = () => {
 
 ## State of completion
 
-| EU Libre 1  | Status | EU Libre 2  | Status              |
-| ------------|------|-------------|---------------------|
-| Activation  | ✅    | Activation  | ✅ |
-| Scan glucose | NFC ✅ | Scan glucose | NFC ✅ / Bluetooth ❌ |  
-| Read FRAM   | ✅    | Read Fram   | ✅                   |
+|  EU Libre 1  |  | EU Libre 2 |               |
+| ------------|--------------|--------------|--------------------|
+| Activation  | ✅            | Activation   | ✅ |
+| Scan glucose | ✅            | Scan glucose | NFC ✅ <br/>Bluetooth ❌ |  
+| Read FRAM   | ✅            | Read Fram    | ✅                  |
 
-| US Libre 1  | Status  | US Libre 2  | Status  |
-| ------------ | ------------ | ------------ | ------------ |
-| Activation  | ❌  |   Activation|  ❌|
-| Scan glucose | NFC ✅  |  Scan glucose  |NFC ❌ Bluetooth ❌ |  
-| Read FRAM   |  ✅ |  Read Fram  | ❌|
+|  US Libre 1  |  |  US Libre 2  |               |
+| ------------ | ----------- | ------------ |------------------|
+| Activation  | ❌  |   Activation| ❌                |
+| Scan glucose | ✅  |  Scan glucose  | NFC ❌<br/>Bluetooth ❌ |  
+| Read FRAM   |  ✅ |  Read Fram  | ❌                |
 
 ## License
 MIT
