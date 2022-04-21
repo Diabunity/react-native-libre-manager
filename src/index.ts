@@ -44,7 +44,7 @@ export interface SensorInfoData {
 const LibreNative: ILibreManger = LibreManagerModule;
 
 const LibreManagerTool: ILibreManger = {
-  getGlucoseHistory: LibreNative.getGlucoseHistory,
+  getGlucoseHistory: LibreNative?.getGlucoseHistory || (()=>{}),
   activateSensor: (cb) => {
     LibreNative.activateSensor((resp: any) => {
       let respData: any[] = [];
