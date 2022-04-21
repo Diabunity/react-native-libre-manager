@@ -2,6 +2,10 @@
 
 React native library to work with abbot freestyle libre sensors by NFC
 
+minimum iOS version required 15.0
+
+Yet only iOS supported. Android contributors are welcome!
+
 ## Issues
 
 not fully covered process with sensors form US/CA/AU regions
