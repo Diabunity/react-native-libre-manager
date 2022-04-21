@@ -21,17 +21,13 @@
   ],
   "scripts": {
     "save": "git add . ; git commit -m \"autocommit\" ; git push origin master",
-    "publish:npm": "npm publish --access=public && yarn push"
+    "publish:npm": "npm publish --access=public"
   },
   "keywords": [
     "react-native",
     "ios",
     "android"
   ],
-  "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.org"
-  },
   "repository": "https://github.com/ddtch/react-native-libre-manager",
   "author": "David Cholariia <4daveid@gmail.com> (https://github.com/ddtch)",
   "contributors": [
