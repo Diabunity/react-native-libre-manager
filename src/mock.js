@@ -17,6 +17,9 @@ class MockLibreManager {
   getGlucoseHistory(cb) {
     cb(fakeResponse);
   }
+  setLang(lang){
+
+  }
 }
 
 module.exports = new MockLibreManager();
