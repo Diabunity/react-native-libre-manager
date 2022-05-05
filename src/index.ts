@@ -13,6 +13,7 @@ export interface ILibreManger {
   activateSensor: (callback: (resp: {activated: boolean}) => void) => void;
   getGlucoseHistory: (cb: (data: IGlucoseData) => void) => void;
   getSensorInfo: (cb: (data: {sensorInfo: SensorInfoData}) => void) => void;
+  setLang: (lang: string)=>void
 }
 
 /**
@@ -44,7 +45,9 @@ export interface SensorInfoData {
 const LibreNative: ILibreManger = LibreManagerModule;
 
 const LibreManagerTool: ILibreManger = {
-  getGlucoseHistory: LibreNative?.getGlucoseHistory || (()=>{}),
+  getGlucoseHistory: (cb)=>{
+    LibreNative.getGlucoseHistory(cb)
+  },
   activateSensor: (cb) => {
     LibreNative.activateSensor((resp: any) => {
       let respData: any[] = [];
@@ -65,6 +68,9 @@ const LibreManagerTool: ILibreManger = {
       cb({sensorInfo: data});
     });
   },
+  setLang: (lang: string)=>{
+    LibreNative.setLang(lang)
+  }
 };
 
 export default LibreManagerTool;

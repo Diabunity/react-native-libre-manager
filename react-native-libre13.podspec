@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   s.authors      = package["author"]
 
   s.platforms    = { :ios => "15.0" }
-  s.source       = { :git => "https://github.com/interhub/react-native-libre13.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/ddtch/react-native-libre-manager.git", :tag => "#{s.version}" }
 
   s.source_files = "ios/**" , "ios/RNLibreToolsiOS13/**", "ios/RNLibreToolsiOS13/Foundation/**", "ios/RNLibreToolsiOS13/Foundation/Logger/**", "ios/RNLibreToolsiOS13/LibreToolsResources/**", "ios/RNLibreToolsiOS13/NFCOperations/**"
 

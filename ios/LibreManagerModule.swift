@@ -61,4 +61,10 @@ class LibreManagerModule: NSObject {
     #endif
   }
 
+
+ @objc
+ func setLang(_ lang: String){
+     RNLibreToolsiOS13.shared.setLang(lang: lang)
+ }
+
 }

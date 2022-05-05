@@ -64,7 +64,8 @@ class NFCAbstractOperation: NSObject, NFCTagReaderSessionDelegate {
         }
         logger.info("\(whoami) started")
         self.tagSession = tagSession
-        tagSession.alertMessage = "Hold the top of your iPhone near the Libre sensor until the second longer vibration"
+        //SET title hold the top
+        tagSession.alertMessage = LibreLang.getActivateTitle()
         tagSession.begin()
     }
 
@@ -110,7 +111,8 @@ class NFCAbstractOperation: NSObject, NFCTagReaderSessionDelegate {
             return
         }
 
-        session.alertMessage = "Scan Complete"
+        //SET scan success title complete
+        session.alertMessage = LibreLang.getScanSuccessTitle()
 
         Task { [weak self] in
             do {

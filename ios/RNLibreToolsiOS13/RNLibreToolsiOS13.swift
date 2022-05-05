@@ -55,6 +55,10 @@ public class RNLibreToolsiOS13 : RnLibreToolsProtocol {
             }
         })
     }
+    
+    public func setLang(lang: String) {
+        LibreLang.setLang(lang: lang)
+    }
 }
 
 @available(iOS 13.0, *)
