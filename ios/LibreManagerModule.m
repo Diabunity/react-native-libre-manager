@@ -16,5 +16,7 @@ RCT_EXTERN_METHOD(getGlucoseHistory: (RCTResponseSenderBlock)callback)
 
 RCT_EXTERN_METHOD(getSensorInfo: (RCTResponseSenderBlock)callback)
 
+RCT_EXTERN_METHOD(setLang: (NSString *)string)
+
 @end
 

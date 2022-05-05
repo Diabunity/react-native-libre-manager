@@ -44,7 +44,7 @@ const getGlucoseData = () => {
 | ------------|--------------|--------------|--------------------|
 | Activation  | ✅            | Activation   | ✅ |
 | Scan glucose | ✅            | Scan glucose | NFC ✅ <br/>Bluetooth ❌ |
-| Read FRAM   | ✅            | Read Fram    | ✅                  |
+| Read FRAM   | ✅            | Read Fram     | ✅                  |
 <br>
 
 |  US Libre 1  |  |  US Libre 2  |               |
