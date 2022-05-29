@@ -11,12 +11,12 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class Libre13Package implements ReactPackage {
+public class LibreManagerPackage implements ReactPackage {
     @NonNull
     @Override
     public List<NativeModule> createNativeModules(@NonNull ReactApplicationContext reactContext) {
         List<NativeModule> modules = new ArrayList<>();
-        modules.add(new Libre13Module(reactContext));
+        modules.add(new LibreManagerModule(reactContext));
         return modules;
     }
 

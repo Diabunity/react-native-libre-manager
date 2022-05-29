@@ -5,15 +5,20 @@
  * 1. String name: A string representing the name of the event
  * 2. String location: A string representing the location of the event
  */
-import {NativeModules} from 'react-native';
+import { NativeModules } from "react-native";
 
-const {LibreManagerModule} = NativeModules;
+const { LibreManager } = NativeModules;
 
 export interface ILibreManger {
-  activateSensor: (callback: (resp: {activated: boolean}) => void) => void;
+  activateSensor: (callback: (resp: { activated: boolean }) => void) => void;
   getGlucoseHistory: (cb: (data: IGlucoseData) => void) => void;
-  getSensorInfo: (cb: (data: {sensorInfo: SensorInfoData}) => void) => void;
-  setLang: (lang: string)=>void
+  getGlucoseHistoryAndroid: (
+    uid?: number[],
+    memoryData?: number[] | null
+  ) => Promise<any>;
+  getSensorInfo: (cb: (data: { sensorInfo: SensorInfoData }) => void) => void;
+  setLang: (lang: string) => void;
+  multiply: (a: number, b: number) => number;
 }
 
 /**
@@ -32,7 +37,7 @@ export interface IGlucoseData {
 
 export interface SensorInfoData {
   age: number;
-  family: 'Libre';
+  family: "Libre";
   initializations: number;
   lastReadingDate: number;
   maxLife: number;
@@ -42,22 +47,31 @@ export interface SensorInfoData {
   type: string;
 }
 
-const LibreNative: ILibreManger = LibreManagerModule;
+const LibreNative: ILibreManger = LibreManager;
 
 const LibreManagerTool: ILibreManger = {
-  getGlucoseHistory: (cb)=>{
-    LibreNative.getGlucoseHistory(cb)
+  getGlucoseHistory: (cb) => {
+    LibreNative.getGlucoseHistory(cb);
+  },
+  getGlucoseHistoryAndroid: async (uid, memoryData) => {
+    if (!uid || !memoryData) return null;
+    try {
+      return await LibreNative.getGlucoseHistoryAndroid(uid, memoryData);
+    } catch (ex) {
+      console.error(ex);
+      return null;
+    }
   },
   activateSensor: (cb) => {
     LibreNative.activateSensor((resp: any) => {
       let respData: any[] = [];
-      if (typeof resp === 'string') {
-        respData = resp.replace(/[{}]/g, '').split(':');
+      if (typeof resp === "string") {
+        respData = resp.replace(/[{}]/g, "").split(":");
       }
       if ((respData.length && respData[1]) || resp?.activated) {
-        cb({activated: true});
+        cb({ activated: true });
       } else {
-        cb({activated: false});
+        cb({ activated: false });
       }
     });
   },
@@ -65,13 +79,15 @@ const LibreManagerTool: ILibreManger = {
     LibreNative.getSensorInfo(async (resp: any) => {
       const mm = await resp;
       const data = JSON.parse(mm.sensorInfo);
-      cb({sensorInfo: data});
+      cb({ sensorInfo: data });
     });
   },
-  setLang: (lang: string)=>{
-    LibreNative.setLang(lang)
-  }
+  setLang: (lang: string) => {
+    LibreNative.setLang(lang);
+  },
+  multiply: (a: number, b: number) => {
+    return LibreNative.multiply(a, b);
+  },
 };
 
 export default LibreManagerTool;
-
