@@ -23,8 +23,8 @@ extension Sensor {
         let current = trend.remove(at: 0)
         let rawHistory: [Double] = history.factoryValues.map({Double($0.value)})//.map({((Double($0.value) / 18.0182) * 10).rounded() / 10})
         return [[
-            "currentGluecose" : [current],
-            "trendHistory" : trend,
+            "current_glucose" : current,
+            "trend_history" : trend,
             "history" : rawHistory
         ]]
     }

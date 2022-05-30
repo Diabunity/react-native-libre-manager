@@ -29,9 +29,9 @@ export interface ILibreManger {
  *
  */
 export interface IGlucoseData {
-  currentGluecose: [number];
+  currentGlucose: number;
   history: number[];
-  trendHistory: number[];
+  trend_history: number[];
 }
 
 export interface SensorInfoData {
