@@ -23,13 +23,13 @@ export interface ILibreManger {
 /**
  * Return response type in libre scan result
  *
- * @param currentGluecose current user glucose last value item with one element. [number]
+ * @param current_glucose current user glucose last value item with one element. [number]
  * @param history 32 metrics for last 8 hour with interval 15 minutes (8*60min/15min=32). Sorted from NEW to OLD
- * @param trendHistory 15 metrics for each last 15 minutes before. Sorted from NEW to OLD
+ * @param trend_history 15 metrics for each last 15 minutes before. Sorted from NEW to OLD
  *
  */
 export interface IGlucoseData {
-  currentGlucose: number;
+  current_glucose: number;
   history: number[];
   trend_history: number[];
 }
