@@ -77,7 +77,7 @@ class NFCReader {
       return Pair(data, "")
     }
 
-    fun append(raw_data: ByteArray, readingTime: Long, sensorId : Long): Pair<List<GlucoseReading>,List<GlucoseReading>> {
+    fun append(raw_data: ByteArray, readingTime: Long, sensorId : String): Pair<List<GlucoseReading>,List<GlucoseReading>> {
         readings.add(raw_data.copyOf())
         val timestamp = RawParser.timestamp(raw_data)
         // Timestamp is 2 mod 15 every time a new reading to history is done.
@@ -94,7 +94,7 @@ class NFCReader {
 
     // Inspects last entry from the same sensor and filters out all that are already logged.
     private fun prepare(chunks : List<SensorChunk>,
-                        sensorId : Long,
+                        sensorId : String,
                         dt : Long,
                         start : Long,
                         certain : Boolean,

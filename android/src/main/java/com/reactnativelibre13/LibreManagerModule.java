@@ -1,5 +1,7 @@
 package com.reactnativelibre13;
 
+import static com.reactnativelibre13.JSONParser.convertJsonToMap;
+
 import androidx.annotation.NonNull;
 
 import com.facebook.react.bridge.Arguments;
@@ -9,11 +11,21 @@ import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.ReadableArray;
 import com.facebook.react.bridge.ReadableMap;
+import com.facebook.react.bridge.WritableArray;
 import com.facebook.react.bridge.WritableMap;
+import com.facebook.react.bridge.WritableNativeArray;
+import com.facebook.react.bridge.WritableNativeMap;
 import com.facebook.react.module.annotations.ReactModule;
 import com.facebook.react.uimanager.IllegalViewOperationException;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 
 import kotlin.Pair;
@@ -31,20 +43,21 @@ public class LibreManagerModule extends ReactContextBaseJavaModule {
         return NAME;
     }
 
-
-    // Example method
-    // See https://reactnative.dev/docs/native-modules-android
-    @ReactMethod(isBlockingSynchronousMethod = true)
-    public int multiply(int a, int b) {
-        return a * b;
+  private WritableArray getGlucoseReadingsAsWritableArray(List<GlucoseReading> glucoseReadings) throws JSONException {
+    WritableArray array = new WritableNativeArray();
+    for (GlucoseReading glucoseReading : glucoseReadings) {
+      WritableMap glucoseMap = convertJsonToMap(new
+        JSONObject(Objects.requireNonNull(glucoseReading.toJsonString())));
+      array.pushMap(glucoseMap);
     }
+    return array;
+  }
 
     @ReactMethod
-    public void getGlucoseHistoryAndroid(ReadableArray uid, ReadableArray memoryData, Promise promise) {
+    public void getGlucoseHistoryAndroid(String tagId, ReadableArray memoryData, Promise promise) {
       Pair<List<GlucoseReading>, List<GlucoseReading>> data = null;
-      WritableMap response = Arguments.createMap();
+      WritableMap response = new WritableNativeMap();
       try{
-        Long tagId = RawParser.Companion.bin2long(Objects.requireNonNull(RawParser.Companion.readableArrayToByteStringArray(uid)));
         Long now = Time.Companion.now();
         Integer timestamp = RawParser.Companion.timestamp(Objects.requireNonNull(RawParser.Companion.readableArrayToByteStringArray(memoryData)));
         //Dont accept values if timestamp is less than 30 minutes (Values are off in the beginning)
@@ -53,11 +66,12 @@ public class LibreManagerModule extends ReactContextBaseJavaModule {
         }else {
           data = NFCReader.Companion.append(Objects.requireNonNull(RawParser.Companion.readableArrayToByteStringArray(memoryData)), now, tagId);
         }
-        ReadableMap first = (ReadableMap) data.getFirst();
-        ReadableMap second = (ReadableMap) data.getSecond();
+        List<GlucoseReading> recent = data.getFirst();
+        List<GlucoseReading> history = data.getSecond();
+        response.putArray("trend_history", getGlucoseReadingsAsWritableArray(recent));
+        response.putArray("history", getGlucoseReadingsAsWritableArray(history));
+        response.putInt("current_glucose", recent.get(0).getValue());
 
-        response.putMap("recent", first);
-        response.putMap("history", second);
 
         promise.resolve(response);
 

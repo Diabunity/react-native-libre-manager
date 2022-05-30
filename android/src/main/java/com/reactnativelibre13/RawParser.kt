@@ -9,6 +9,11 @@ class RawParser {
     fun bin2int(a: Byte, b: Byte) : Int = (byte2uns(a) shl 8) or byte2uns(b)
     fun bin2int(a: Byte, b: Byte, c: Byte) : Int = (byte2uns(a) shl 16) or (byte2uns(b) shl 8) or byte2uns(c)
     fun byte2uns(a: Byte) : Int = (a.toInt() + 256)%256
+    fun ByteArray.toHexString() : String {
+      return this.joinToString("") {
+        java.lang.String.format("%02x", it)
+      }
+    }
     fun bin2long(b: ByteArray) : Long {
       var r = 0L
       for (i in 0..7) {
@@ -59,11 +64,10 @@ class RawParser {
     }
 
     fun readableArrayToByteStringArray(readableArray: ReadableArray): ByteArray? {
-      val bytes: MutableList<Byte> = ArrayList(readableArray.size() * 5)
+      val bytes: MutableList<Byte> = ArrayList(readableArray.size())
       for (i in 0 until readableArray.size()) {
-        for (b in readableArray.getInt(i).toString().toByteArray()) {
+          val b = readableArray.getInt(i).toByte()
           bytes.add(b)
-        }
       }
       val bytesArr = ByteArray(bytes.size)
       for (i in bytes.indices) {

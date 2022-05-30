@@ -13,12 +13,11 @@ export interface ILibreManger {
   activateSensor: (callback: (resp: { activated: boolean }) => void) => void;
   getGlucoseHistory: (cb: (data: IGlucoseData) => void) => void;
   getGlucoseHistoryAndroid: (
-    uid?: number[],
+    tagId?: string,
     memoryData?: number[] | null
   ) => Promise<any>;
   getSensorInfo: (cb: (data: { sensorInfo: SensorInfoData }) => void) => void;
   setLang: (lang: string) => void;
-  multiply: (a: number, b: number) => number;
 }
 
 /**
@@ -53,14 +52,9 @@ const LibreManagerTool: ILibreManger = {
   getGlucoseHistory: (cb) => {
     LibreNative.getGlucoseHistory(cb);
   },
-  getGlucoseHistoryAndroid: async (uid, memoryData) => {
-    if (!uid || !memoryData) return null;
-    try {
-      return await LibreNative.getGlucoseHistoryAndroid(uid, memoryData);
-    } catch (ex) {
-      console.error(ex);
-      return null;
-    }
+  getGlucoseHistoryAndroid: async (tagId, memoryData) => {
+    if (!tagId || !memoryData) return null;
+    return await LibreNative.getGlucoseHistoryAndroid(tagId, memoryData);
   },
   activateSensor: (cb) => {
     LibreNative.activateSensor((resp: any) => {
@@ -84,9 +78,6 @@ const LibreManagerTool: ILibreManger = {
   },
   setLang: (lang: string) => {
     LibreNative.setLang(lang);
-  },
-  multiply: (a: number, b: number) => {
-    return LibreNative.multiply(a, b);
   },
 };
 
