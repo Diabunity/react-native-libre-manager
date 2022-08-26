@@ -16,7 +16,10 @@ export interface ILibreManger {
     tagId?: string,
     memoryData?: number[] | null
   ) => Promise<any>;
-  getSensorInfo: (cb: (data: { sensorInfo: SensorInfoData }) => void) => void;
+  getSensorInfo: (
+    cb: (data: { sensorLife: Pick<SensorInfoData, "age"> }) => void
+  ) => void;
+  getSensorInfoAndroid: (memoryData?: number[] | null) => Promise<any>;
   setLang: (lang: string) => void;
 }
 
@@ -73,8 +76,12 @@ const LibreManagerTool: ILibreManger = {
     LibreNative.getSensorInfo(async (resp: any) => {
       const mm = await resp;
       const data = JSON.parse(mm.sensorInfo);
-      cb({ sensorInfo: data });
+      cb({ sensorLife: data.age });
     });
+  },
+  getSensorInfoAndroid: async (memoryData) => {
+    if (!memoryData) return null;
+    return await LibreNative.getSensorInfoAndroid(memoryData);
   },
   setLang: (lang: string) => {
     LibreNative.setLang(lang);
