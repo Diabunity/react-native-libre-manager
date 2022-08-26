@@ -63,4 +63,21 @@ public class LibreManagerModule extends ReactContextBaseJavaModule {
         promise.reject("E_NFC_ERROR", e);
       }
     }
+
+  @ReactMethod
+  public void getSensorInfo(ReadableArray memoryData, Promise promise) {
+    Pair<List<GlucoseReading>, List<GlucoseReading>> data = null;
+    WritableMap response = new WritableNativeMap();
+    try{
+      Long now = Time.Companion.now();
+      Integer timestamp = RawParser.Companion.timestamp(Objects.requireNonNull(RawParser.Companion.readableArrayToByteStringArray(memoryData)));
+
+      response.putDouble("sensorLife", Time.Companion.timeLeft(timestamp).getFirst());
+
+      promise.resolve(response);
+
+    }catch (Exception e){
+      promise.reject("E_NFC_ERROR", e);
+    }
+  }
 }

@@ -7,11 +7,14 @@ class Time {
     val DURATION_MINUTES = 20160
     var MINUTES_DAY = 1440.0
     fun now() : Long = System.currentTimeMillis()
-    fun timeLeft(timeStamp: Int) : Pair<Double, Boolean>  {
-      val left = DURATION_MINUTES - timeStamp
-      val days = left/MINUTES_DAY
 
-      return Pair(days, left < 0)
+    fun timeLeft(timeStamp: Int) : Double {
+      val left = DURATION_MINUTES - timeStamp
+      if left < 0 {
+        return 0
+      }
+
+      return left/MINUTES_DAY
     }
   }
 }
