@@ -67,7 +67,7 @@ public class LibreManagerModule extends ReactContextBaseJavaModule {
       Long now = Time.Companion.now();
       Integer timestamp = RawParser.Companion.timestamp(Objects.requireNonNull(RawParser.Companion.readableArrayToByteStringArray(memoryData)));
 
-      response.putDouble("sensorLife", Time.Companion.timeLeft(timestamp).getFirst());
+      response.putDouble("sensorLife", Time.Companion.timeLeft(timestamp));
 
       promise.resolve(response);
 
