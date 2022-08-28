@@ -52,11 +52,6 @@ public class LibreManagerModule extends ReactContextBaseJavaModule {
         response.putArray("history", getGlucoseReadingsAsWritableArray(history));
         response.putInt("current_glucose", recent.get(0).getValue());
 
-        WritableMap freestyleDevice = new WritableNativeMap();
-        freestyleDevice.putBoolean("expired", Time.Companion.timeLeft(timestamp).getSecond());
-        freestyleDevice.putDouble("expires_on", Time.Companion.timeLeft(timestamp).getFirst());
-        response.putMap("freestyle_device", freestyleDevice);
-
         promise.resolve(response);
 
       }catch (Exception e){
