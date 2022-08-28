@@ -11,7 +11,7 @@ class Time {
     fun timeLeft(timeStamp: Int) : Double {
       val left = DURATION_MINUTES - timeStamp
       if (left < 0) {
-        return 0
+        return 0.0
       }
 
       return left/MINUTES_DAY
