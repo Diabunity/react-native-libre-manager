@@ -19,7 +19,7 @@ import java.util.Map;
 import static com.reactnativelibre13.JSONParser.convertJsonToMap;
 
 public class LibreManagerModule extends ReactContextBaseJavaModule {
-    public static final String NAME = "LibreManager";
+    public static final String NAME = "LibreManagerModule";
 
     public LibreManagerModule(ReactApplicationContext reactContext) {
         super(reactContext);

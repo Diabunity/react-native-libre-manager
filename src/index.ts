@@ -7,7 +7,7 @@
  */
 import { NativeModules } from "react-native";
 
-const { LibreManager } = NativeModules;
+const { LibreManagerModule } = NativeModules;
 
 export interface ILibreManger {
   activateSensor: (callback: (resp: { activated: boolean }) => void) => void;
@@ -49,7 +49,7 @@ export interface SensorInfoData {
   type: string;
 }
 
-const LibreNative: ILibreManger = LibreManager;
+const LibreNative: ILibreManger = LibreManagerModule;
 
 const LibreManagerTool: ILibreManger = {
   getGlucoseHistory: (cb) => {

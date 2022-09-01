@@ -40,6 +40,7 @@ class LibreManagerModule: NSObject {
           callback(response)
         case .failure(let error):
           print(error)
+          callback([["trend" : [], "score": [0], "history": []]])
         }
       }
     #endif
@@ -56,6 +57,7 @@ class LibreManagerModule: NSObject {
           callback(response)
         case .failure(let error):
           print(error)
+          callback(["sensorInfo", [{}]])
         }
       }
     #endif
