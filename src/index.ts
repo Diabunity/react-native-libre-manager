@@ -81,7 +81,7 @@ const LibreManagerTool: ILibreManger = {
   },
   getSensorInfoAndroid: async (memoryData) => {
     if (!memoryData) return null;
-    return await LibreNative.getSensorInfo(memoryData);
+    return await LibreNative.getSensorInfoAndroid(memoryData);
   },
   setLang: (lang: string) => {
     LibreNative.setLang(lang);
