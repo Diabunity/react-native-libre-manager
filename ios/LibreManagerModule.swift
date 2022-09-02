@@ -32,15 +32,27 @@ class LibreManagerModule: NSObject {
   @objc
   func getGlucoseHistory(_ callback: @escaping  RCTResponseSenderBlock) {
     #if targetEnvironment(simulator)
-      callback([["trend" : [], "score": [0], "history": []]])
+      callback([["glucoseHistory": [], "sensorInfo": [{}]]])
     #else
+      let startSession = null
+      let sensorInfo = null
       RNLibreToolsiOS13.shared.startSession { result in
         switch result {
         case .success(let response):
-          callback(response)
+          startSession = response
         case .failure(let error):
           print(error)
-          callback([["trend" : [], "score": [0], "history": []]])
+          callback([["glucoseHistory" : [], "sensorInfo": [{}]]])
+        }
+      }
+     RNLibreToolsiOS13.shared.getSensorInfo { result in
+        switch result {
+        case .success(let response):
+          sensorInfo = response
+          callback(["sensorInfo" : response, "glucoseHistory": startSession])
+        case .failure(let error):
+          print(error)
+          callback([["glucoseHistory" : [], "sensorInfo": [{}]]])
         }
       }
     #endif

@@ -11,7 +11,7 @@ const { LibreManagerModule } = NativeModules;
 
 export interface ILibreManger {
   activateSensor: (callback: (resp: { activated: boolean }) => void) => void;
-  getGlucoseHistory: (cb: (data: IGlucoseData) => void) => void;
+  getGlucoseHistory: (cb: (data: IResponse) => void) => void;
   getGlucoseHistoryAndroid: (
     tagId?: string,
     memoryData?: number[] | null
@@ -31,6 +31,11 @@ export interface ILibreManger {
  * @param trend_history 15 metrics for each last 15 minutes before. Sorted from NEW to OLD
  *
  */
+export interface IResponse {
+  glucoseHistory: IGlucoseData;
+  sensorInfo: SensorInfoData;
+}
+
 export interface IGlucoseData {
   current_glucose: number[];
   history: number[];
