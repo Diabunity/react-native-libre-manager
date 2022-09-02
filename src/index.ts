@@ -32,7 +32,7 @@ export interface ILibreManger {
  *
  */
 export interface IGlucoseData {
-  current_glucose: number;
+  current_glucose: number[];
   history: number[];
   trend_history: number[];
 }
