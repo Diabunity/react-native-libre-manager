@@ -69,7 +69,7 @@ public class LibreManagerModule extends ReactContextBaseJavaModule {
     }
 
   @ReactMethod
-  public void getSensorInfo(ReadableArray memoryData, Promise promise) {
+  public void getSensorInfoAndroid(ReadableArray memoryData, Promise promise) {
     Pair<List<GlucoseReading>, List<GlucoseReading>> data = null;
     WritableMap response = new WritableNativeMap();
     try{
