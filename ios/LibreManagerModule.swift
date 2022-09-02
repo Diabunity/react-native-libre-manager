@@ -34,8 +34,8 @@ class LibreManagerModule: NSObject {
     #if targetEnvironment(simulator)
       callback([["glucoseHistory": [], "sensorInfo": [{}]]])
     #else
-      let startSession = null
-      let sensorInfo = null
+      let startSession: any[] = [];
+      let sensorInfo: any[] = [];
       RNLibreToolsiOS13.shared.startSession { result in
         switch result {
         case .success(let response):
@@ -49,7 +49,7 @@ class LibreManagerModule: NSObject {
         switch result {
         case .success(let response):
           sensorInfo = response
-          callback(["sensorInfo" : response, "glucoseHistory": startSession])
+          callback([["glucoseHistory": startSession, "sensorInfo": sensorInfo]])
         case .failure(let error):
           print(error)
           callback([["glucoseHistory" : [], "sensorInfo": [{}]]])
