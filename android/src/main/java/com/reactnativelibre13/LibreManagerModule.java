@@ -41,6 +41,32 @@ public class LibreManagerModule extends ReactContextBaseJavaModule {
     return array;
   }
 
+  private String getTendency(List<GlucoseReading> glucoseReadings) {
+    int[] measures = new int[recent.size()];
+
+    for (int i = 0; i < recent.size(); i++) {
+      measures[i] = recent.get(i).getValue();
+    }
+
+    LinearRegression linearRegression = new LinearRegression(measures);
+
+    double followingMeasurePredicted = linearRegression.predict(15);
+    int lastMeasure = measures[measures.length-1];
+    if (followingMeasurePredicted > lastMeasure + 2) {
+      return "RISING_QUICKLY";
+    } else if (followingMeasurePredicted > lastMeasure + 1) {
+      return "RISING";
+    } else if (followingMeasurePredicted > lastMeasure) {
+      return "CHANGING_SLOWLY";
+    } else if (lastMeasure > followingMeasurePredicted + 2) {
+      return "FAILING_QUICKLY";
+    } else if (lastMeasure > followingMeasurePredicted + 1) {
+      return "FAILING";
+    }
+
+    return "";
+  }
+
     @ReactMethod
     public void getGlucoseHistoryAndroid(String tagId, ReadableArray memoryData, Promise promise) {
       Pair<List<GlucoseReading>, List<GlucoseReading>> data = null;
@@ -60,6 +86,7 @@ public class LibreManagerModule extends ReactContextBaseJavaModule {
         response.putArray("trend_history", getGlucoseReadingsAsWritableArray(recent));
         response.putArray("history", getGlucoseReadingsAsWritableArray(history));
         response.putInt("current_glucose", recent.get(0).getValue());
+
 
         promise.resolve(response);
 
