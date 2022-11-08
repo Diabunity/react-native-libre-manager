@@ -86,6 +86,7 @@ public class LibreManagerModule extends ReactContextBaseJavaModule {
         response.putArray("trend_history", getGlucoseReadingsAsWritableArray(recent));
         response.putArray("history", getGlucoseReadingsAsWritableArray(history));
         response.putInt("current_glucose", recent.get(0).getValue());
+        response.putString("tendency", getTendency(recent));
 
 
         promise.resolve(response);
