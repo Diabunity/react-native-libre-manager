@@ -35,7 +35,6 @@ export interface IGlucoseData {
   current_glucose: number[];
   history: number[];
   trend_history: number[];
-  tendency: string;
 }
 
 export interface SensorInfoData {
