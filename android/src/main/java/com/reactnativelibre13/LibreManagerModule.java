@@ -57,7 +57,7 @@ public class LibreManagerModule extends ReactContextBaseJavaModule {
         Integer timestamp = RawParser.Companion.timestamp(Objects.requireNonNull(RawParser.Companion.readableArrayToByteStringArray(memoryData)));
         //Dont accept values if timestamp is less than 30 minutes (Values are off in the beginning)
         if(timestamp < 30){
-          throw new Exception("Wait for" + (30 - timestamp) + "minutes until reading");
+          throw new Exception("Espera por" + (30 - timestamp) + "minutos para empezar a medirte por primera vez.");
         }else {
           data = NFCReader.Companion.append(Objects.requireNonNull(RawParser.Companion.readableArrayToByteStringArray(memoryData)), now, tagId);
         }
